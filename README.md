@@ -137,111 +137,6 @@ Your app will run on:
 
 ---
 
-## 🌐 Deployment Guide
-
-### ❗ Important Note
-
-Flask cannot *directly* run on Vercel because Vercel is frontend-oriented.
-However, you **CAN deploy using a Python serverless adapter**, or use a recommended platform:
-
-### ✔ Recommended Deployment Platforms
-
-* Render.com
-* Railway.app
-* Deta Space
-* PythonAnywhere
-* Any PaaS with Python support
-
----
-
-## 🚀 Deploy Flask App on Vercel (Working Method)
-
-### 1️⃣ Install Vercel CLI
-
-```bash
-pip install vercel
-```
-
-### 2️⃣ Create `vercel.json` (required)
-
-Create a file named **vercel.json** in the root folder:
-
-```json
-{
-  "version": 2,
-  "builds": [
-    {
-      "src": "app.py",
-      "use": "@vercel/python"
-    }
-  ],
-  "routes": [
-    {
-      "src": "/(.*)",
-      "dest": "app.py"
-    }
-  ]
-}
-```
-
-### 3️⃣ Deploy to Vercel
-
-```bash
-vercel
-```
-
-Your live deployment link will appear in the terminal.
-
----
-
-## 🔥 GitHub Repository Information
-
-### 📌 Repository Name
-
-```
-TaskMaster-Python-Productivity-App
-```
-
-### 📌 Repository Description
-
-```
-A modern task management application built using Python, Flask, SQLAlchemy, and Flask-Login. Includes user authentication, responsive UI, dark theme, landing page, animations, and complete task CRUD system.
-```
-
----
-
-## 🧑‍💻 GitHub Upload Commands (VS Code → GitHub)
-
-Open VS Code terminal inside project folder, then run:
-
-```bash
-git init
-git add .
-git commit -m "Initial commit - TaskMaster App"
-git branch -M main
-git remote add origin https://github.com/muzamalasgharofficial/TaskMaster-Python-Productivity-App.git
-git push -u origin main
-```
-
-Your project is now uploaded to GitHub.
-
----
-
-# 🌐 Host on Vercel — How You Will See Your Project
-
-Visit:
-👉 [https://vercel.com/muzamal-asghars-projects](https://vercel.com/muzamal-asghars-projects)
-
-After deploying using:
-
-```bash
-vercel
-```
-
-Your project will appear in the dashboard automatically.
-
----
-
 ## 🧑‍💻 Author
 
 **👤 Muzamal Asghar**
@@ -249,6 +144,7 @@ Software Engineer | Flutter & React Native Developer | AI/ML Enthusiast
 Pakistan
 
 🔗 LinkedIn: [https://www.linkedin.com/in/muzamalasgharofficial](https://www.linkedin.com/in/muzamalasgharofficial)
+
 🔗 GitHub: [https://github.com/muzamalasgharofficial](https://github.com/muzamalasgharofficial)
 
 ---
@@ -257,5 +153,3 @@ Pakistan
 
 **MIT License**
 Free to use and modify for personal or commercial projects.
-
----
