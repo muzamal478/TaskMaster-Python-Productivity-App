@@ -1,0 +1,73 @@
+:root{
+  --bg:#0b0c0f;
+  --surface:#0f1720;
+  --muted:#98a0b3;
+  --accent:#6ea8fe;
+  --success:#2dd4bf;
+  --danger:#ff6b6b;
+  --card:#0d1117;
+  --glass: rgba(255,255,255,0.03);
+}
+
+/* Page layout: ensure footer is pushed to bottom using flex */
+html, body {
+  height: 100%;
+}
+.tm-body { min-height: 100vh; display: block; }
+.tm-page-wrapper { min-height: 100vh; display: flex; flex-direction: column; }
+
+/* Make main area flexible to push footer */
+main.container { flex: 1 0 auto; padding-top: 1.5rem; padding-bottom: 1.5rem; }
+
+/* Main background / colors */
+body{
+  background: linear-gradient(180deg,var(--bg) 0%, #06070a 100%);
+  color:#e6eef8;
+  font-family: Inter, ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+  -webkit-font-smoothing:antialiased;
+  -moz-osx-font-smoothing:grayscale;
+  line-height:1.45;
+}
+
+/* surfaces */
+.bg-surface{ background: linear-gradient(180deg,var(--surface), rgba(255,255,255,0.02)); }
+.navbar {
+  -webkit-backdrop-filter: blur(4px); /* Webkit first for Safari */
+  backdrop-filter: blur(4px); /* Standard property */
+  background: linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));
+}
+
+/* Cards and small UI parts */
+.card { background: linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01)); border-radius:12px; border:1px solid rgba(255,255,255,0.03); }
+.bg-card { background: rgba(255,255,255,0.02); padding: .8rem; }
+
+/* Controls */
+.form-control-dark{ background: rgba(255,255,255,0.02); color:var(--muted); border:1px solid rgba(255,255,255,0.03); }
+.form-control-dark:focus{ box-shadow:0 0 0 0.15rem rgba(110,168,254,0.12); border-color:var(--accent); color:#fff; }
+
+/* Task card specifics */
+.task-card .card-body{ display:flex; gap:1rem; align-items:flex-start; }
+.priority-indicator{ width:10px; height:44px; border-radius:6px; flex-shrink:0; }
+.priority-indicator.urgent{ background: linear-gradient(180deg, #ff6b6b, #ff3b3b); box-shadow: 0 6px 14px rgba(255,59,59,0.12); }
+.priority-indicator.high{ background: linear-gradient(180deg, #ff9f43, #ff7a00); box-shadow: 0 6px 14px rgba(255,122,0,0.08); }
+.priority-indicator.medium{ background: linear-gradient(180deg, #6ea8fe, #2f7fe0); box-shadow: 0 6px 14px rgba(46,118,208,0.06); }
+.priority-indicator.low{ background: linear-gradient(180deg, #9be7d8, #6dd3b1); box-shadow: 0 6px 14px rgba(45,212,191,0.04); }
+
+/* Small utils */
+.btn-ghost{ background: transparent; border: 1px solid rgba(255,255,255,0.03); color:var(--muted); }
+.btn-icon{ background:transparent; border:0; color:var(--muted); }
+.avatar{ width:36px; height:36px; border-radius:8px; display:inline-flex; align-items:center; justify-content:center; background:var(--glass); color:var(--muted); }
+.text-muted{ color:var(--muted) !important; }
+
+/* footer adjustments: always at bottom and visible */
+footer { flex-shrink: 0; }
+
+/* responsiveness tweaks */
+@media (max-width: 767px){
+  .navbar .search-input{ display:none; }
+  .brand-text{ font-size:1rem; }
+  .mock-window img{ width:100%; height:auto; }
+}
+
+/* subtle animations */
+.animate__fadeInDown{ --animate-duration: .6s; }

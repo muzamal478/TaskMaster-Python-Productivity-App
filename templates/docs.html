@@ -1,0 +1,31 @@
+{% extends "layout.html" %}
+{% block title %}Docs{% endblock %}
+{% block body %}
+<h2 class="mb-3">Documentation</h2>
+<p class="text-muted">Quick guide to run TaskMaster and use main features.</p>
+
+<div class="card bg-surface border-0 shadow-sm mb-3">
+  <div class="card-body">
+    <h5>Run locally</h5>
+    <pre class="small bg-transparent text-light p-2">python -m venv venv
+source venv/bin/activate  # or venv\Scripts\activate on Windows
+pip install -r requirements.txt
+python app.py
+# open http://127.0.0.1:5000
+</pre>
+  </div>
+</div>
+
+<div class="card bg-surface border-0 shadow-sm">
+  <div class="card-body">
+    <h5>API</h5>
+    <p class="text-muted">Authenticated endpoints (login required):</p>
+    <ul class="text-muted">
+      <li><code>GET /api/tasks</code> — list tasks</li>
+      <li><code>POST /api/tasks</code> — create task (JSON)</li>
+      <li><code>PUT /api/tasks/:id</code> — update</li>
+      <li><code>DELETE /api/tasks/:id</code> — delete</li>
+    </ul>
+  </div>
+</div>
+{% endblock %}

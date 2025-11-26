@@ -1,0 +1,36 @@
+{% extends "layout.html" %}
+{% block title %}Contact{% endblock %}
+{% block body %}
+<div class="row justify-content-center">
+  <div class="col-md-8">
+    <div class="card bg-surface border-0 shadow-sm">
+      <div class="card-body">
+        <h4>Contact</h4>
+        <p class="text-muted">Send a message — stored to instance/contact_messages.json on the server.</p>
+
+        <form method="post" action="{{ url_for('contact') }}">
+          <div class="mb-3">
+            <label class="form-label small" for="name">Your name</label>
+            <input name="name" id="name" class="form-control form-control-dark" required 
+                   placeholder="Enter your full name" title="Please enter your full name">
+          </div>
+          <div class="mb-3">
+            <label class="form-label small" for="email">Email</label>
+            <input name="email" id="email" type="email" class="form-control form-control-dark" required 
+                   placeholder="Enter your email address" title="Please enter a valid email address">
+          </div>
+          <div class="mb-3">
+            <label for="message" class="form-label small">Message</label>
+            <textarea id="message" name="message" rows="5" class="form-control form-control-dark" required 
+                      placeholder="Write your message here" title="Enter your message here"></textarea>
+          </div>
+          <div>
+            <button type="submit" class="btn btn-primary">Send message</button>
+            <a href="{{ url_for('index') }}" class="btn btn-outline-light">Cancel</a>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+{% endblock %}

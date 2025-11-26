@@ -1,0 +1,33 @@
+{% extends "layout.html" %}
+{% block title %}About{% endblock %}
+{% block body %}
+<div class="row align-items-center">
+  <div class="col-lg-6">
+    <h2 class="fw-bold">About TaskMaster</h2>
+    <p class="text-muted">TaskMaster is a lightweight, offline-capable task manager built with Python and Flask. It is designed to help freelancers and small teams prioritize work, set reminders, and stay focused with a beautiful dark interface.</p>
+
+    <h5 class="mt-4">Why TaskMaster?</h5>
+    <ul class="text-muted">
+      <li>Simple, focused feature set — create tasks, set priority and reminders.</li>
+      <li>Offline-capable and sync-ready via a small API.</li>
+      <li>Designed for readability with a dark-first UI for long work sessions.</li>
+    </ul>
+
+    <a class="btn btn-primary mt-3" href="{{ url_for('register') }}">Try it free</a>
+  </div>
+
+  <div class="col-lg-6">
+    <div class="card bg-surface border-0 shadow-sm p-3">
+      <div class="card-body">
+        <h5 class="mb-3">Core features</h5>
+        <div class="row g-2">
+          <div class="col-6"><div class="p-3 bg-card rounded">Priority sorting</div></div>
+          <div class="col-6"><div class="p-3 bg-card rounded">Reminders & notifications</div></div>
+          <div class="col-6"><div class="p-3 bg-card rounded">Offline caching</div></div>
+          <div class="col-6"><div class="p-3 bg-card rounded">REST API for sync</div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+{% endblock %}

@@ -1,0 +1,27 @@
+{% extends "layout.html" %}
+{% block title %}Welcome{% endblock %}
+{% block body %}
+<div class="row align-items-center">
+  <div class="col-lg-6">
+    <h1 class="display-5 fw-bold mb-3 animate__animated animate__fadeInDown">TaskMaster — Smart tasks, beautiful dark UI</h1>
+    <p class="lead text-muted mb-4">Modern task manager for freelancers & small teams. Prioritize, schedule reminders, work offline and sync later.</p>
+
+    <div class="d-flex gap-2">
+      <a class="btn btn-lg btn-primary shadow-sm" href="{{ url_for('register') }}">Get Started</a>
+      <a class="btn btn-lg btn-outline-light" href="{{ url_for('login') }}">Sign in</a>
+    </div>
+
+    <ul class="mt-4 text-muted">
+      <li>Priority sorting & clear visual cues</li>
+      <li>Dark-first design for comfortable coding sessions</li>
+      <li>Offline caching, reminders, and sync-ready API</li>
+    </ul>
+  </div>
+
+  <div class="col-lg-6 text-center">
+    <div class="mock-window animate__animated animate__zoomIn">
+      <img src="static/css/hero-image.jpg" class="img-fluid rounded" alt="TaskMaster preview">
+    </div>
+  </div>
+</div>
+{% endblock %}
