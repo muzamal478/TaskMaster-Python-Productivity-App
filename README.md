@@ -115,10 +115,7 @@ taskmaster/
 ## 📸 Screenshots
 
 ### 🏠 Landing Page  
-
-```markdown
 ![TaskMaster Screenshot](static/images/landing-page.jpeg)
-````
 
 ---
 
