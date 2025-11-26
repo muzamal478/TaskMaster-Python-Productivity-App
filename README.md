@@ -115,10 +115,9 @@ taskmaster/
 ## 📸 Screenshots
 
 ### 🏠 Landing Page  
-(Add your screenshot here after uploading)
 
 ```markdown
-![TaskMaster Screenshot](static/images/landing.png)
+![TaskMaster Screenshot](static/images/landing-page.jpeg)
 ````
 
 ---
@@ -263,23 +262,3 @@ Pakistan
 Free to use and modify for personal or commercial projects.
 
 ---
-
-```
-
----
-
-### ✅ Your README is 100% ready  
-### ✅ Professional  
-### ✅ Beautiful formatting  
-### ✅ Full details included  
-### ✅ Copy-Paste ready for GitHub  
-
-If you'd like, I can also:  
-🔥 Add badges  
-🔥 Add more screenshots  
-🔥 Add GIF preview  
-🔥 Add docs pages inside README  
-🔥 Add installation video section  
-
-Just tell me — I’m here for you, Muzamal! 🚀
-```
